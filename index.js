@@ -74,7 +74,7 @@ app.post("/create-checkout-session", isAuthenticated, async (req, res) => {
       payment_method_types: ["card"],
       mode: "payment",
       line_items: lineItems,
-      success_url: `$https://green-ecommerce.netlify.app/callback/success?session_id={CHECKOUT_SESSION_ID}`,
+      success_url: `https://green-ecommerce.netlify.app/callback/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `https://green-ecommerce.netlify.app/callback/failure`,
     })
 
